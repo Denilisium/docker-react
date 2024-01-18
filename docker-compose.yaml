@@ -1,12 +1,8 @@
 version: '3.9'
 services:
   web:
-    build: 
+    build:
       context: .
-      dockerfile: Dockerfile.dev
-    environment:
-      - WATCHPACK_POLLING=true
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    volumes:
-      - .:/usr/app
+      - '80:80'
